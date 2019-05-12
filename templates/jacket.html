@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Product Rating System</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+</head>
+
+<body>
+    <section id="main">
+        <header id="header">
+            <div id="newtext">Product Rating System</span></div>
+        </header>
+        <div class="gallery">
+            <div class="content row">
+                <div class="media col-md-4">
+                    <div class="">
+                        <a href="#"><img src="{{ url_for('static', filename='images/01.jpg') }}" alt="Jacket" title="Men's Denim Jacket" /></a>
+                    </div>
+                </div>
+
+                <div class="col-md-7" style="margin: auto 0;">
+                    <h3 id="mytext">Men's Denim Jacket</h3>
+                    <span class="badge badge-primary" id="mytext2" style="font-size: 25px;">Rs. 4,500 </span>
+                    <h4 id="mytext2"> <span class="badge badge-success">{{ stars[1] }}</span> Stars </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-md-6" style="border-right: 2px solid #cfcfcf">
+                    <form>
+                        <div class="form-group">
+                            <label for="uname">
+                                <h5>Your Name</h5>
+                            </label>
+                            <input type="text" palceholder="Enter Your Name" id="uname">
+                            <label for="reviewbox">
+                                <h5>Your Review</h5>
+                            </label>
+                            <textarea type="text" class="form-control" id="reviewbox" aria-describedby="reviewlHelp"
+                                placeholder="Write a Review" style="min-height:100px" name="review" required></textarea>
+                            <small id="reviewHelp" class="form-text text-muted">Tell us how you feel about the product.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit"> Submit </button>
+                        
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+                        <script>
+                                let reviewtext;
+                                let uname;
+
+                                $("#reviewbox").change(function () {
+                                    reviewtext = $('#reviewbox').val();
+                                });
+
+                                $("#reviewbox").change(function () {
+                                    uname = $('#uname').val();
+                                });
+                        
+                                $("#submit").click(function (event) {
+                                    let message = {
+                                        review: reviewtext,
+                                        uname: uname
+                                    }
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "http://127.0.0.1:5000/postreview",
+                                        data: JSON.stringify(message),
+                                        success: function (response) {
+                                            alert("Success");
+                                        },
+                                        error: function (data) {
+                                            console.log(response);
+                                        },
+                                    });
+                                });
+                            </script>
+                    </form>
+                    <hr>
+                    <p>The product rating is generated based on the review you provide</p>
+                </div>
+
+                <div class="col-md-6" id="review">
+                    <h5>Previous Reviews</h5>
+                    {% for item in data %}
+                    <div class="card bg-light mycard">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item[1] }} &nbsp; &nbsp;
+                                <span class="badge badge-success">{{ item[3] }}</span>
+                            </h5>
+                            <p class="card-text"> {{ item[2] }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="copyright">
+                &copy; Project Team : <b>Pukar Ghimire | Rajesh Pandey | Dependra Ramtel | Prativa Poudel</b>
+            </div>
+        </footer>
+    </section>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.poptrox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
