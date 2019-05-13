@@ -56,7 +56,7 @@ tokenizer = Tokenizer(num_words=10000)
 tokenizer.fit_on_texts(X_train)
 
 
- In[5]: Find the rating
+#In[5]: Find the rating
 
 
 def rate(p):
