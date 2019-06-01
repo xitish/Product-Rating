@@ -1,12 +1,12 @@
 # Product Rating System
-#### Using Text Based Sentiment Analysis
+#### Using Deep Learning
 <hr>
 
 ## About
-__This product generates rating of a product in an e-commerce website by analyzing the text based review provided by the users.__ <br><br>
+__This product generates rating of a product in an e-commerce website by analyzing the text based review using deep learning provided by the users.__ <br><br>
 <p align="center"> <img src="https://github.com/xitish/Product-Rating/blob/master/static/aa.gif"></p>
 
-The system uses sentiment analysis methodology in order to achieve desired functionality. The reviews provided by the users about a product on an e-commerce website is analyzed and rating of that product is generated based on the review. This system completely eradicates the trouble of giving rating as well as writing review and helps to generate accurate rating based on user reviews. <br><br>
+The system uses sequence learning methodology in order to achieve desired functionality. The reviews provided by the users about a product on an e-commerce website is analyzed and rating of that product is generated based on the review. This system completely eradicates the trouble of giving rating as well as writing review and helps to generate accurate rating based on user reviews. <br><br>
 <a href="https://drive.google.com/file/d/15NL7WCjxYIbqRguM62V44d2FwRiwrv2X/view?usp=sharing" > Learn More </a>
 
 ## Installation
