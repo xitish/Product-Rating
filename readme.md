@@ -37,6 +37,11 @@ Download __LSTM Model__ and __Text Data__ frome <a href="https://drive.google.co
 The folder should look as follows:
 <p align="center"> <img src="https://github.com/xitish/Product-Rating/blob/master/static/a.jpg"></p>
 
+> __Database
+
+  - Create a database named `rating` in your SQL Server (database and table names can be changed inside `rating.sql` file). 
+  - Import the `rating.sql` into your SQL Database.
+
 ## Usage
 Open __Command Prompt (CMD)__ and navigate to the folder containing the files. Then run
 <code>flask run</code>
