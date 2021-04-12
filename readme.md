@@ -3,7 +3,7 @@
 <hr>
 
 ## About
-__This product generates rating of a product in an e-commerce website by analyzing the text based review using deep learning provided by the users.__ <br><br>
+__This Project generates rating of a product in an e-commerce website by analyzing the text based review provided by the users using deep learning.__ <br><br>
 <p align="center"> <img src="https://github.com/xitish/Product-Rating/blob/master/static/aa.gif"></p>
 
 The system uses sequence learning methodology in order to achieve desired functionality. The reviews provided by the users about a product on an e-commerce website is analyzed and rating of that product is generated based on the review. This system leverages the power of machine learning to completely eradicates the trouble of giving rating as well as writing review and helps to predict accurate rating based on user reviews. <br><br>
