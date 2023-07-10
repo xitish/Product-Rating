@@ -3,6 +3,7 @@ pandas
 tqdm
 tensorflow
 sklearn
+scikit-learn
 matplotlib
 keras
 nltk
