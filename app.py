@@ -22,6 +22,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer
 from keras.models import load_model
 from keras import backend as K
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+DB_NAME = os.getenv("DB_NAME")
+DB_USERNAME = os.getenv("DB_USERNAME")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 
 # In[2]: Load Model
@@ -78,10 +85,12 @@ import MySQLdb
 
 app = Flask(__name__)
 
-conn = MySQLdb.connect(host= "localhost",
-                  user="root",
-                  passwd="pukar11",
-                  db="rating")
+conn = MySQLdb.connect(
+                  host="localhost",
+                  user=DB_USERNAME,
+                  passwd=DB_USERNAME,
+                  db=DB_NAME
+                )
 c = conn.cursor()
 
 
