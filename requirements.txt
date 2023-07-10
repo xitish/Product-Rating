@@ -1,0 +1,12 @@
+numpy
+pandas
+tqdm
+tensorflow
+sklearn
+matplotlib
+keras
+nltk
+flask
+SQLAlchemy
+Flask-MySQL
+mysqlclient
